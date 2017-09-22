@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Honours Meeting"
-author: "Benjamin Moran"
 date: "5 May 2017"
 categories: Benjamin
 ---
