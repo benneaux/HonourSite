@@ -156,7 +156,7 @@ fit2</code></pre>
 zUnVacc &lt;-  ts.intersect(UnVacc, stats::lag(UnVacc, -1), stats::lag(UnVacc, -2))</code></pre>
 <p>We can look at the plot.</p>
 <pre class="r"><code>plot(zUnVacc)</code></pre>
-<img src="_images/HonoursMeeting/unnamed-chunk-2-2.png" style="display: block; margin: auto;" />
+<img src="{ site.url }}/_images/HonoursMeeting/unnamed-chunk-2-2.png" style="display: block; margin: auto;" />
 <pre class="r"><code>fit3 &lt;- lm(zUnVacc[3:113,1] ~ zUnVacc[3:113,2] + zUnVacc[3:113,3] + zVaxx[,2] + 0)
 summary(fit3)</code></pre>
 <pre><code>##
