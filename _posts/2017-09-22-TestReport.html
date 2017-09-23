@@ -138,7 +138,7 @@ resVaxx &lt;- fit$residuals</code></pre>
 <pre class="r"><code>Vaxx &lt;- ts(Vaxx,start = 1, end = 115)
 zVaxx &lt;- ts.intersect(Vaxx, stats::lag(Vaxx, -1), stats::lag(Vaxx, -4))</code></pre>
 <pre class="r"><code>plot(zVaxx)</code></pre>
-<img src="{{site.url}}/_images/HonoursMeeting/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="{{site.url}}/images/HonoursMeeting/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 <pre class="r"><code>fit2 &lt;- arima(UnVacc[5:115],c(2,0,0), xreg = cbind(zVaxx[,2],zVaxx[,3]))
 fit2</code></pre>
 <pre><code>##
@@ -156,7 +156,7 @@ fit2</code></pre>
 zUnVacc &lt;-  ts.intersect(UnVacc, stats::lag(UnVacc, -1), stats::lag(UnVacc, -2))</code></pre>
 <p>We can look at the plot.</p>
 <pre class="r"><code>plot(zUnVacc)</code></pre>
-<img src="{{site.url}}/_images/HonoursMeeting/unnamed-chunk-2-2.png"/>
+<img src="{{site.url}}/images/HonoursMeeting/unnamed-chunk-2-2.png"/>
 <pre class="r"><code>fit3 &lt;- lm(zUnVacc[3:113,1] ~ zUnVacc[3:113,2] + zUnVacc[3:113,3] + zVaxx[,2] + 0)
 summary(fit3)</code></pre>
 <pre><code>##
@@ -203,7 +203,7 @@ rel.error3 &lt;- rel.error2 %&gt;%
   mutate(ID = 1:n()) %&gt;%
   select(-`Relative error`) %&gt;%
   gather(key = series, value = values, `Actual`, `Predicted`,-ID)</code></pre>
-<img src="{{site.url}}/_images/HonoursMeeting/relerror-1.png"/>
+<img src="{{site.url}}/images/HonoursMeeting/relerror-1.png"/>
 <pre class="r"><code>plot.ts(UnVacc[1:end.ind], ylim=c(0, 0.06), xlim=c(0,111)) + # Label title and axes
 lines(c(1:111), as.numeric(predict(fit3,newdata = data.frame(x = n.samp)), col=&quot;red&quot;))
 #lines(c((end.ind + 1):115), as.numeric(predict(fit3, n.samp)-2*predict(fit3, n.samp)$se), col=&quot;red&quot;, lty=&quot;dashed&quot;)
