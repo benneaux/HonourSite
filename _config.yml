@@ -31,6 +31,7 @@ plugins:
 future: TRUE
 # include: ["_images"]
 permalink: /post/:title/
+url: https://benneaux.github.io/HonourSite
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
