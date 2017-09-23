@@ -5,8 +5,3 @@
 layout: home
 regenerate: true
 ---
-
-
-## Hello Emelie and/or Jacob.
-
-This site does not yet work. MARVEL IN IT'S INADEQUACY!!!
