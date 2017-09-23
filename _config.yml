@@ -29,7 +29,7 @@ theme: minima
 plugins:
   - jekyll-feed
 future: TRUE
-# include: ["_images"]
+include: ["_images"]
 permalink: /post/:title/
 url: https://benneaux.github.io/HonourSite
 # Exclude from processing.
