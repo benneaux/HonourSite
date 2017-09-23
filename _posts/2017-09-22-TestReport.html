@@ -156,7 +156,7 @@ fit2</code></pre>
 zUnVacc &lt;-  ts.intersect(UnVacc, stats::lag(UnVacc, -1), stats::lag(UnVacc, -2))</code></pre>
 <p>We can look at the plot.</p>
 <pre class="r"><code>plot(zUnVacc)</code></pre>
-<img src="/_images/HonoursMeeting/unnamed-chunk-2-2.png" style="display: block; margin: auto;" />
+<img src="/_images/HonoursMeeting/unnamed-chunk-2-2.png"/>
 <pre class="r"><code>fit3 &lt;- lm(zUnVacc[3:113,1] ~ zUnVacc[3:113,2] + zUnVacc[3:113,3] + zVaxx[,2] + 0)
 summary(fit3)</code></pre>
 <pre><code>##
@@ -203,9 +203,7 @@ rel.error3 &lt;- rel.error2 %&gt;%
   mutate(ID = 1:n()) %&gt;%
   select(-`Relative error`) %&gt;%
   gather(key = series, value = values, `Actual`, `Predicted`,-ID)</code></pre>
-<p>
-  <img src="/_images/HonoursMeeting/relerror-1.png" style="display: block; margin: auto;" />
-</p>
+<img src="/_images/HonoursMeeting/relerror-1.png"/>
 <pre class="r"><code>plot.ts(UnVacc[1:end.ind], ylim=c(0, 0.06), xlim=c(0,111)) + # Label title and axes
 lines(c(1:111), as.numeric(predict(fit3,newdata = data.frame(x = n.samp)), col=&quot;red&quot;))
 #lines(c((end.ind + 1):115), as.numeric(predict(fit3, n.samp)-2*predict(fit3, n.samp)$se), col=&quot;red&quot;, lty=&quot;dashed&quot;)

@@ -29,7 +29,7 @@ theme: minima
 plugins:
   - jekyll-feed
 future: TRUE
-include: ["_images"]
+# include: ["_images"]
 permalink: /post/:title/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
