@@ -5,3 +5,11 @@
 layout: home
 regenerate: true
 ---
+
+## Number of Respondents
+
+![]("images/current/respondents.png")
+
+## % Influenza-Like-Illness Symptoms by Vaccination Status
+
+![]("images/current/VaccStatusILI.png")
