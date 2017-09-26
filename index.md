@@ -6,10 +6,10 @@ layout: home
 regenerate: true
 ---
 
-## Number of Respondents
+### Number of Respondents
 
-![]("images/current/respondents.png")
+<img src="{{site.url}}/images/current/respondents.png"/>
 
-## % Influenza-Like-Illness Symptoms by Vaccination Status
+### % Influenza-Like-Illness Symptoms by Vaccination Status
 
-![]("images/current/VaccStatusILI.png")
+<img src="{{site.url}}/images/current/VaccStatusILI.png"/>
