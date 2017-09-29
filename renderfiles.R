@@ -3,6 +3,6 @@ library(stringi)
 library(knitr)
 rmarkdown::render(file.choose(),
        output_dir = "_posts/",
-       output_file = "2017-09-29-TestBlog.html",
+       output_file = paste(Sys.Date(),"TestBlog.html", sep = "-"),
        output_format = render_jekyll())
 
