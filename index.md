@@ -5,11 +5,3 @@
 layout: home
 regenerate: true
 ---
-
-### Number of Respondents
-
-<img src="{{site.url}}/images/current/respondents.png"/>
-
-### % Influenza-Like-Illness Symptoms by Vaccination Status
-
-<img src="{{site.url}}/images/current/VaccStatusILI.png"/>
